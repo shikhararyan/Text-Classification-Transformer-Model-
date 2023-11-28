@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis</title>
+</head>
+<body>
+    <h1>Sentiment Analysis</h1>
+    <form action="/predict" method="post">
+        <label for="user_input">Enter your review:</label><br>
+        <textarea id="user_input" name="user_input" rows="4" cols="50"></textarea><br>
+        <input type="submit" value="Predict">
+    </form>
+    {% if user_input %}
+    <p>Your review: {{ user_input }}</p>
+    <p>Predicted Sentiment: {{ prediction }}</p>
+    {% endif %}
+</body>
+</html>
